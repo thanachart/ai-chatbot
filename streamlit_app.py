@@ -37,7 +37,7 @@ if user_input := st.chat_input("Type your message here..."):
     if model:
         try:
             response = model.generate_content(user_input)
-            bot_response = response.text if response.candidates else "Sorry, I couldn't process your input."
+            bot_response = response.text
 
             # Store and display the bot response
             st.session_state.chat_history.append(("assistant", bot_response))
