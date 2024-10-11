@@ -57,7 +57,7 @@ if user_input := st.chat_input("Type your message here..."):
         try:
             if st.session_state.uploaded_data is not None and analyze_data_checkbox:
                 data_description = st.session_state.uploaded_data.describe().to_string()
-                prompt = f"Analyze the following dataset and provide insights:\n\n{data_description}"
+                prompt = f"Analyze the following dataset and provide insights based on this question {user_input}:\n\n{data_description}"
             else:
                 prompt = user_input 
 
