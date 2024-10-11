@@ -1,5 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
+import pandas as pd
 
 st.title("🐧 My chatbot app")
 st.subheader("Conversation")
