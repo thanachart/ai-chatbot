@@ -24,6 +24,10 @@ if gemini_api_key:
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []  # Initialize with an empty list
 
+# Initialize session state for storing data uploaded
+if "uploaded_data" not in st.session_state:
+    st.session_state.uploaded_data = []  # Initialize with an empty list
+
 # Display previous chat history using st.chat_message (if available)
 for role, message in st.session_state.chat_history:
     st.chat_message(role).markdown(message)
